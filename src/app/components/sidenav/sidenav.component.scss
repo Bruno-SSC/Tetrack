@@ -1,0 +1,75 @@
+.sidenav {
+  height: 100%;
+  width: 300px;
+  background-color: #5847eb;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+
+  position: relative;
+}
+
+.sidenav-profile-pic {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  .sidenav-profile-pic__img {
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+
+.sidenav-name {
+  width: 90%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba($color: #9c9c9c, $alpha: 0.3);
+  .sidenav-name__h1 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .sidenav-name__p {
+    font-size: 1rem;
+    color: #9c9c9c;
+  }
+}
+
+.sidenav-links {
+  width: 90%;
+  height: fit-content;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba($color: #9c9c9c, $alpha: 0.3);
+  .sidenav-links__a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgba($color: #c3c3c3, $alpha: 0.5);
+    box-shadow: 0px 0px 2px 1px #fff;
+    border-radius: 10px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease-in-out;
+  }
+  .sidenav-links__a:hover {
+    background-color: rgba($color: #c3c3c3, $alpha: 0.7);
+    box-shadow: 0px 0px 0px 0px #fff;
+  }
+}
+
+.login-logout {
+  position: absolute;
+  bottom: 0;
+}

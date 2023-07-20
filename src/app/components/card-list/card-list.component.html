@@ -1,0 +1,8 @@
+<app-card
+  *ngFor="let actv of actvList$ | async"
+  [actv]="actv"
+  [deleteMode]="deleteMode"
+  (removeActv)="removeActv($event)"
+/>
+<!-- Using 'async' pipe will automatically subscribe to actvList$ and handle the
+unsubscription when the component is destroyed. -->

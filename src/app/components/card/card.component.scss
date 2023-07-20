@@ -1,0 +1,81 @@
+@mixin card-layout {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+:host {
+  height: 200px;
+}
+
+.activity {
+  height: 200px;
+  width: 250px;
+  background-color: hsl(235, 45%, 30%);
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: "Rubik", sans-serif;
+  color: #9c9c9c;
+  font-size: 1.2rem;
+
+  position: relative;
+}
+
+.activity-info {
+  @include card-layout;
+  align-items: center;
+  .activity-info__p {
+    display: inline;
+  }
+  .activity-info__p--dots {
+    cursor: pointer;
+    font-size: 1.5rem;
+    a {
+      text-decoration: none;
+      color: #9c9c9c;
+    }
+  }
+}
+
+.activity-hours {
+  @include card-layout;
+  flex-direction: column;
+  gap: 20px;
+  .activity-hours__h1 {
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    .activity-hours__btn {
+      cursor: pointer;
+    }
+  }
+}
+
+.activity::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 16px;
+  background-color: var(--beforeColor);
+  overflow: hidden;
+}
+
+.activity::after {
+  content: var(--afterImg);
+  position: absolute;
+  top: -45px;
+  right: 10px;
+  mix-blend-mode: color-burn;
+  z-index: -1;
+  overflow: hidden;
+}

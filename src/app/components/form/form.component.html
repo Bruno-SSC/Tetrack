@@ -1,0 +1,34 @@
+<h1>Activity Data</h1>
+<form action="" class="newAct">
+  <div class="input-drawer">
+    <p class="input-drawer__p">Nome</p>
+    <input
+      class="input-drawer__input"
+      type="text"
+      [placeholder]="actv?.name ?? 'new act'"
+      [defaultValue]="actv?.name ?? ''"
+    />
+  </div>
+
+  <div class="select-drawer">
+    <select class="select-drawer__select" name="" id="">
+      <option value="">Blue</option>
+      <option value="">Yellow</option>
+      <option value="">Red</option>
+    </select>
+  </div>
+
+  <div class="select-drawer">
+    <select class="select-drawer__select" name="" id="">
+      <option value="">Play</option>
+      <option value="">Study</option>
+      <option value="">Exercise</option>
+    </select>
+  </div>
+
+  <div class="button-drawer">
+    <button type="button" class="button-drawer__button">
+      <a [routerLink]="['']" (click)="saveNewActv()">Save</a>
+    </button>
+  </div>
+</form>

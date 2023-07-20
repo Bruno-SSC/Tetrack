@@ -1,0 +1,37 @@
+<div class="activity" [id]="actv?.ID">
+  <div class="activity-info">
+    <p class="activity-info__p">{{ actv?.name }}</p>
+    <p class="activity-info__p activity-info__p--dots">
+      <a *ngIf="deleteMode == false" [routerLink]="['edit', actv?.ID]">...</a>
+      <a *ngIf="deleteMode" (click)="removeActv.emit($event)">&#9949;</a>
+    </p>
+  </div>
+
+  <div class="activity-hours">
+    <h1 class="activity-hours__h1">
+      <span
+        id="decrease"
+        (click)="updateTimeAmount($event)"
+        class="activity-hours__btn"
+        >-</span
+      >
+      <span>{{ actv?.timeAmount }}</span>
+      <span
+        id="increase"
+        (click)="updateTimeAmount($event)"
+        class="activity-hours__btn"
+        >+</span
+      >
+    </h1>
+    <p class="activity-hours__p">
+      Previous -
+
+      <span>{{ previousActTime }}</span>
+    </p>
+  </div>
+</div>
+
+<!-- 
+  The non-null assertion operator is an exclamation mark ( ! ), and this is placed after the variable or expression that we want to tell TypeScript isn't null or undefined .
+  It's basically a way to say "ayo ts chill, i know it would be undefined. Fuck it."
+-->
