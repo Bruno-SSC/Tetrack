@@ -5,17 +5,36 @@
   color: #fff;
 }
 
-:host {
+.sec-menu {
+  height: 100%;
+  width: 300px;
+  background-color: #5847eb;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+
+  position: absolute;
+  right: 0;
+}
+
+.form-wrapper {
   margin-top: 30px;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
   @include typo();
 }
 
 .newAct {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: flex-end;
   gap: 30px;
   width: 100%;
@@ -41,6 +60,11 @@
 }
 
 .select-drawer {
+  display: flex;
+  flex-direction: column;
+  .select-drawer_p {
+    margin: 0 0 10px 10px;
+  }
   .select-drawer__select {
     background-color: rgba($color: #c3c3c3, $alpha: 0.5);
     box-shadow: 0px 0px 2px 1px #fff;
@@ -58,17 +82,18 @@
   .button-drawer__button {
     border: none;
     outline: none;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
     cursor: pointer;
     background-color: rgba($color: #c3c3c3, $alpha: 0.5);
     box-shadow: 0px 0px 2px 1px #fff;
-    border-radius: 10px;
     height: 40px;
     width: 90px;
+    border-radius: 10px;
     display: grid;
     place-items: center;
-    transition: all 0.5s ease-in-out;
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+    }
   }
 }

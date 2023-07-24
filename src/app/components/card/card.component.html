@@ -3,20 +3,32 @@
     <p class="activity-info__p">{{ actv?.name }}</p>
     <p class="activity-info__p activity-info__p--dots">
       <a *ngIf="deleteMode == false" [routerLink]="['edit', actv?.ID]">...</a>
+
       <a *ngIf="deleteMode" (click)="removeActv.emit($event)">&#9949;</a>
     </p>
   </div>
 
   <div class="activity-hours">
-    <h1 class="activity-hours__h1">
+    <h1
+      class="activity-hours__h1"
+      [style]="
+        timeframe !== 'daily'
+          ? 'justify-content: start'
+          : 'justify-content: space-around'
+      "
+    >
       <span
+        *ngIf="timeframe === 'daily'"
         id="decrease"
         (click)="updateTimeAmount($event)"
         class="activity-hours__btn"
         >-</span
       >
-      <span>{{ actv?.timeAmount }}</span>
+
+      <span>{{ actv?.timeAmount + "Hrs" }}</span>
+
       <span
+        *ngIf="timeframe === 'daily'"
         id="increase"
         (click)="updateTimeAmount($event)"
         class="activity-hours__btn"
@@ -26,7 +38,7 @@
     <p class="activity-hours__p">
       Previous -
 
-      <span>{{ previousActTime }}</span>
+      <span>{{ previousActTime + "Hrs" }}</span>
     </p>
   </div>
 </div>

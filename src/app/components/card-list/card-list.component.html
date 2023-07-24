@@ -1,8 +1,15 @@
-<app-card
-  *ngFor="let actv of actvList$ | async"
-  [actv]="actv"
-  [deleteMode]="deleteMode"
-  (removeActv)="removeActv($event)"
-/>
+<section class="layout">
+  <div class="card-list">
+    <app-card
+      *ngFor="let actv of actvList$ | async"
+      [actv]="actv"
+      [deleteMode]="deleteMode"
+      (timeDetectAlert)="timeChangeDetect()"
+      (removeActv)="removeActv($event)"
+    />
+  </div>
+  <router-outlet />
+</section>
+
 <!-- Using 'async' pipe will automatically subscribe to actvList$ and handle the
 unsubscription when the component is destroyed. -->

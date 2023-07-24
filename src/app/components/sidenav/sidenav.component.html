@@ -13,16 +13,12 @@
   </div>
 
   <nav class="sidenav-links">
-    <a class="sidenav-links__a" [routerLink]="['']"> Home </a>
-    <a class="sidenav-links__a" [routerLink]="['newAct']"> New </a>
-    <a class="sidenav-links__a" [routerLink]="['cardList/' + true]"> Delete </a>
+    <a class="sidenav-links__a" routerLink="/home/daily"> Home </a>
+    <app-timeframes-nav />
+
+    <!--  <a class="sidenav-links__a" routerLink="/newAct"> New </a>
+    <a class="sidenav-links__a" [routerLink]="['/deleteMode/' + true]"> Delete </a> -->
   </nav>
-<!-- 
-  <nav class="sidenav-links">
-    <a class="sidenav-links__a" [routerLink]="['']"> Daily </a>
-    <a class="sidenav-links__a" [routerLink]="['']"> Weekly </a>
-    <a class="sidenav-links__a" [routerLink]="['']"> Monthly </a>
-  </nav> -->
 
   <nav class="sidenav-links login-logout">
     <a class="sidenav-links__a" [routerLink]=""> Login </a>

@@ -1,7 +1,21 @@
 :host {
-  margin-top: 100px;
+  width: 100%;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-list {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid white;
+  justify-content: center;
+  row-gap: 80px;
+  column-gap: 20px;
+  height: fit-content;
+  margin: 100px auto 0 auto;
+  padding: 0 20px;
   width: 70%;
 }
