@@ -1,0 +1,76 @@
+.profile {
+  width: 300px;
+  height: 550px;
+  position: relative;
+}
+
+.profile .card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 2;
+  border-radius: 16px;
+
+  background-color: hsl(246, 80%, 60%);
+}
+
+.profile .card-back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  border-radius: 0 0 16px 16px;
+
+  z-index: 1;
+  background-color: hsl(235, 46%, 20%);
+}
+
+.profile .card-front__img-wrapper {
+  width: 100%;
+  img {
+    width: 100px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+.profile .card-front .text-area {
+  width: 150px;
+  font-family: "Rubik", sans-serif;
+  margin-top: 30px;
+  margin-left: 30px;
+  .text-area__title {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .text-area__span {
+    font-size: 1.2rem;
+    color: #9c9c9c;
+  }
+}
+
+.profile .card-back__nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 30px;
+  gap: 10px;
+}
+.profile .card-back__links {
+  color: #9c9c9c;
+  font-size: 1.2rem;
+  font-family: "Rubik", sans-serif;
+  transition: all ease 1s;
+  text-decoration: none;
+}
+
+.profile .card-back__links--active {
+  color: #fff;
+}

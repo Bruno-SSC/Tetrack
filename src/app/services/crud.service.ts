@@ -54,7 +54,6 @@ export class CrudService {
       return e;
     });
 
-    console.log(this.actvList[day]);
   }
 
   retrieveAllActvs(): ActvList | [] {

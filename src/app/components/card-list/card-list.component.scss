@@ -1,21 +1,11 @@
-:host {
-  width: 100%;
-}
-
-.layout {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-}
-
 .card-list {
+  width: 1000px;
+  height: 550px;
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 80px;
-  column-gap: 20px;
-  height: fit-content;
-  margin: 100px auto 0 auto;
-  padding: 0 20px;
-  width: 70%;
+  align-content: space-between;
+  gap: 15px;
+
+  padding-top: 50px; // 30% de 200px do activity card before
 }
