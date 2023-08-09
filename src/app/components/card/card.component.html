@@ -2,7 +2,7 @@
   <div class="activity-info">
     <p class="activity-info__p">{{ actv?.name }}</p>
     <p class="activity-info__p activity-info__p--dots">
-      <a *ngIf="deleteMode == false" [routerLink]="['edit', actv?.ID]">...</a>
+      <a *ngIf="deleteMode == false">...</a>
 
       <a *ngIf="deleteMode" (click)="removeActv.emit($event)">&#9949;</a>
     </p>
