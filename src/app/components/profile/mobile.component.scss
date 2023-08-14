@@ -1,0 +1,59 @@
+@use "../../styles/variables.scss";
+
+@media screen and (max-width: variables.$mediumScreen) {
+  .profile {
+    margin-top: 30px;
+    height: 230px;
+  }
+
+  .profile .card-front {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile .card-front__img-wrapper {
+    width: fit-content;
+    height: fit-content;
+    img {
+      margin: 0;
+      width: 70px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .profile .card-front .text-area {
+    width: fit-content;
+    height: fit-content;
+    margin: 0px;
+
+    .text-area__title {
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #fff;
+      letter-spacing: 2xpx;
+    }
+    .text-area__span {
+      font-size: 1rem;
+      color: #9c9c9c;
+    }
+  }
+  .profile .card-back {
+    display: grid;
+    place-items: center;
+  }
+
+  .profile .card-back__nav {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .profile .card-back__links {
+    width: fit-content;
+  }
+}

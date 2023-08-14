@@ -1,0 +1,32 @@
+@use "../../styles/variables.scss";
+
+@media screen and (max-width: variables.$mediumScreen) {
+  .activity {
+    height: 140px;
+    width: 300px;
+  }
+  .activity-hours {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+
+    .activity-hours__h1 {
+      font-size: 2rem;
+      display: flex;
+      gap: 10px;
+    }
+    .activity-hours__p {
+      font-size: 1rem;
+    }
+  }
+  .activity::before {
+    left: 0.5px;
+    width: 99.5%;
+  }
+
+  .activity::after {
+    top: -30px;
+  }
+}

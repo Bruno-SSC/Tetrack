@@ -1,3 +1,4 @@
+@use "../../styles/variables.scss";
 .card-list {
   height: 525px;
   display: grid;
@@ -7,8 +8,11 @@
   align-items: space-between;
   padding-top: 50px; //pra compensar o espaço ocupado pelo :before da atv que é uma % da altura da mesma.
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: variables.$mediumScreen) {
     grid-template: 1fr 1fr / 1fr;
     grid-auto-rows: auto;
+    height: fit-content;
+    padding-bottom: 50px;
+    gap: 50px;
   }
 }

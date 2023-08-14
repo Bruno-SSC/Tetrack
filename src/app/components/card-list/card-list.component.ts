@@ -11,12 +11,9 @@ import { Activity } from 'src/app/ts/interfaces';
 })
 export class CardListComponent implements OnInit {
   public actvList$: BehaviorSubject<Activity[]> | undefined;
-  public deleteMode: boolean = false;
   private timeframe: string | null = 'daily';
 
-  constructor(private crud: CrudService, private route: ActivatedRoute) {
-    this.deleteMode = Boolean(this.route.snapshot.paramMap.get('deleteMode'));
-  }
+  constructor(private crud: CrudService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -29,12 +26,5 @@ export class CardListComponent implements OnInit {
 
   timeChangeDetect(): void {
     this.actvList$?.next(this.crud.retrieveActvs(this.timeframe));
-  }
-
-  removeActv(e: Event): void {
-    let el = e.target as HTMLElement;
-    let divActv = el.closest('.activity') as HTMLElement;
-    this.crud.deleteData(divActv.id);
-    // FIXME: this.actvList$.next(this.crud.retrieveActvs());
   }
 }

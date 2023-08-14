@@ -1,0 +1,17 @@
+@use "../../styles/variables.scss";
+
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+section h1 {
+  font-size: 3rem;
+  color: #fff;
+  width: fit-content;
+  @media screen and (max-width: variables.$mediumScreen) {
+    font-size: 1.5rem;
+  }
+}

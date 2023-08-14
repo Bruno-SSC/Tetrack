@@ -25,9 +25,7 @@ export class CrudService {
     return sumActvs;
   }
 
-  retrieveOneActv(id: string): void {
-   
-  }
+  retrieveOneActv(id: string): void {}
 
   deleteData(id: string): void {
     let day = this.currentDay;
@@ -53,26 +51,41 @@ export class CrudService {
       }
       return e;
     });
-
   }
 
   retrieveAllActvs(): ActvList | [] {
     return this.actvList;
   }
 
-  private createDatesArray(timeframe: string | null): string[] {
+  createDatesArray(timeframe: string | null, prevTime?: boolean): string[] {
     let startPos: number = 0;
 
-    switch (timeframe) {
-      case 'daily':
-        startPos = -1;
-        break;
-      case 'weekly':
-        startPos = -7;
-        break;
-      case 'monthly':
-        startPos = -31;
-        break;
+    if (prevTime) {
+      switch (timeframe) {
+        case 'daily':
+          startPos = -2;
+          break;
+        case 'weekly':
+          startPos = -14;
+          break;
+        case 'monthly':
+          startPos = -62;
+          break;
+      }
+    }
+
+    if (!prevTime) {
+      switch (timeframe) {
+        case 'daily':
+          startPos = -1;
+          break;
+        case 'weekly':
+          startPos = -7;
+          break;
+        case 'monthly':
+          startPos = -31;
+          break;
+      }
     }
 
     let allActvs = this.retrieveAllActvs();
@@ -81,12 +94,16 @@ export class CrudService {
       (each) => this.currentDay === each
     );
     currentDayPos++;
+
     allDaysIndex = allDaysIndex.slice(currentDayPos + startPos, currentDayPos);
 
+    if (prevTime) {
+      allDaysIndex = allDaysIndex.slice(undefined, startPos / 2);
+    }
     return allDaysIndex;
   }
 
-  private sumTimeAmounts(allDaysIndex: string[]): Activity[] {
+  sumTimeAmounts(allDaysIndex: string[]): Activity[] {
     //TODO: ao invés do dia atual eu devia pegar o primeiro dia conhecido como atividades base e a cada iteração onde exista uma atividade que não bate com nenhuma das presentes, eu adiciono ela na base de atividades para soma.
 
     let baseActvs = JSON.parse(JSON.stringify(this.actvList[this.currentDay]));

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CardListComponent } from './components/card-list/card-list.component';
-import { HomeComponent } from './components/home/home.component';
+import { ContainerComponent } from './components/container/container.component';
+import { ShowDataComponent } from './components/show-data/show-data.component';
 
 const routes: Routes = [
   {
@@ -10,8 +10,16 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'home',
+    redirectTo: 'home/daily',
+  },
+  {
     path: 'home/:timeframe',
-    component: HomeComponent,
+    component: ContainerComponent,
+  },
+  {
+    path: 'actData',
+    component: ShowDataComponent,
   },
 ];
 

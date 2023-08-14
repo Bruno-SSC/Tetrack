@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { HomeComponent } from './components/home/home.component';
+import { ContainerComponent } from './components/container/container.component';
+import { ShowDataComponent } from './components/show-data/show-data.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
     CardComponent,
     CardListComponent,
     ProfileComponent,
-    HomeComponent,
+    ContainerComponent,
+    ShowDataComponent,
   ],
   imports: [
     BrowserModule,

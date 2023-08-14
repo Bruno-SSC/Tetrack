@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss";
+
 @mixin card-layout {
   width: 90%;
   display: flex;
@@ -7,7 +9,7 @@
 .activity {
   height: 200px;
   width: 250px;
-  background-color: hsl(235, 45%, 30%);
+  background-color: hsl(235, 46%, 20%);
   border-radius: 16px;
 
   display: flex;
@@ -20,6 +22,12 @@
   font-size: 1.2rem;
 
   position: relative;
+
+  transition: all 1s ease;
+}
+
+.activity:hover {
+  background-color: hsl(235, 45%, 30%);
 }
 
 .activity-info {
@@ -34,6 +42,13 @@
     a {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .activity-info__p--dots:hover {
+    a {
+      cursor: pointer;
+      color: #fff;
     }
   }
 }
@@ -52,13 +67,17 @@
       cursor: pointer;
     }
   }
+
+  .activity-hours__p {
+    text-transform: capitalize;
+  }
 }
 
 .activity::before {
   content: "";
   position: absolute;
   top: -25%;
-  left: 0;
+  left: 0px;
   height: 100%;
   width: 100%;
   z-index: -1;
