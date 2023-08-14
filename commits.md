@@ -12,3 +12,6 @@ commit 3
     
 commit 4
     Impedi que as horas diárias fosse menos que 0 ou mais que 24
+
+commit 5
+    Arrumando o readme.
