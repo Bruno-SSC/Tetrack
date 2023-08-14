@@ -43,11 +43,17 @@ export class CardComponent implements AfterViewInit, OnInit {
   updateTimeAmount(e: Event): void {
     let el = e.target as HTMLElement;
 
-    el.id == 'increase'
-      ? this.actv!.timeAmount++
-      : this.actv!.timeAmount == 0
-      ? (this.actv!.timeAmount = 0)
-      : this.actv!.timeAmount--;
+    if (el.id == 'increase') {
+      this.actv!.timeAmount == 24
+        ? (this.actv!.timeAmount = 24)
+        : this.actv!.timeAmount++;
+    }
+
+    if (el.id == 'decrease') {
+      this.actv!.timeAmount == 0
+        ? (this.actv!.timeAmount = 0)
+        : this.actv!.timeAmount--;
+    }
 
     this.crud.updateTimeAmount(this.actv);
     this.timeDetectAlert.emit();
