@@ -15,3 +15,6 @@ commit 4
 
 commit 5
     Arrumando o readme.
+
+commit 6
+    Revisando pra apagar localmente.

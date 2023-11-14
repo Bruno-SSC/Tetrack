@@ -2,7 +2,7 @@
 
 ## Briefing 📄
 
-The time tracking app is as challenge from frontendMentor. I initially did it only with the usual html, css and js when starting my studies. I rebuilt it a few times already, the second one was with react and now I did it with angular.
+The time tracking app is as challenge from frontendMentor. I initially did it only with the usual html, css when starting my studies. I rebuilt it a few times already. This one I did it with angular featuring sum of the time added.
 
 > [Acessar](https://tetrack-ng.netlify.app/)
 
