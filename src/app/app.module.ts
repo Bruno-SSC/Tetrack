@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,7 @@ import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContainerComponent } from './components/container/container.component';
-import { ShowDataComponent } from './components/show-data/show-data.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { ShowDataComponent } from './components/show-data/show-data.component';
     CardListComponent,
     ProfileComponent,
     ContainerComponent,
-    ShowDataComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgSelectModule,

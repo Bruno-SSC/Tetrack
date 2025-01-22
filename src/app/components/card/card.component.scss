@@ -1,97 +1,60 @@
-@use "../../styles/variables.scss";
+@import "variables.scss";
 
-@mixin card-layout {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.activity {
-  height: 200px;
-  width: 250px;
+.activity_div {
+  height: 100%;
+  width: 100%;
   background-color: hsl(235, 46%, 20%);
   border-radius: 16px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 1.5fr 1fr;
   align-items: center;
-  justify-content: space-evenly;
 
   font-family: "Rubik", sans-serif;
-  color: #9c9c9c;
-  font-size: 1.2rem;
-
-  position: relative;
-
+  font-size: 1vw;
   transition: all 1s ease;
 }
 
-.activity:hover {
+.activity_img {
+  border-radius: 16px;
+  border: 1px solid yellow;
+  height: 100%;
+}
+
+.activity_div:hover {
   background-color: hsl(235, 45%, 30%);
 }
 
-.activity-info {
-  @include card-layout;
+.activity_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
   align-items: center;
-  .activity-info__p {
-    display: inline;
-    color: #fff;
-  }
-  .activity-info__p--dots {
-    font-size: 1rem;
-    a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.7);
-    }
-  }
-
-  .activity-info__p--dots:hover {
-    a {
-      cursor: pointer;
-      color: #fff;
-    }
-  }
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #fff;
 }
 
-.activity-hours {
-  @include card-layout;
-  flex-direction: column;
-  gap: 20px;
-  .activity-hours__h1 {
-    color: #fff;
-    font-size: 2.3rem;
-    font-weight: 400;
-    display: flex;
-    justify-content: space-around;
-    .activity-hours__btn {
-      cursor: pointer;
-    }
-  }
-
-  .activity-hours__p {
-    text-transform: capitalize;
-  }
+.activity_info__dots {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 1s ease;
 }
 
-.activity::before {
-  content: "";
-  position: absolute;
-  top: -25%;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  border-radius: 16px;
-  background-color: var(--beforeColor);
-  overflow: hidden;
+.activity_info__dots:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
-.activity::after {
-  content: var(--afterImg);
-  position: absolute;
-  top: -45px;
-  right: 10px;
-  mix-blend-mode: color-burn;
-  z-index: -1;
-  overflow: hidden;
+.activity_curr_time {
+  padding: 0 20px;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 400;
+  justify-self: center;
+}
+
+.activity_prev_time {
+  padding-left: 20px;
+  color: #9c9c9c;
+  text-transform: capitalize;
 }

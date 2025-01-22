@@ -1,0 +1,13 @@
+.main {
+  height: 60vh;
+  width: 80vw;
+  display: flex;
+  gap: 20px;
+  border: 1px solid white;
+}
+
+// basically the same as :host
+app-card-list {
+  height: 100%;
+  width: 100%;
+}

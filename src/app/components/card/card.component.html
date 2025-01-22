@@ -1,55 +1,15 @@
-<div class="activity" [id]="actv?.ID">
-  <div class="activity-info">
-    <p class="activity-info__p">{{ actv?.name }}</p>
-    <p class="activity-info__p activity-info__p--dots">
-      <a>&#8226; &#8226; &#8226; </a>
-    </p>
+<div class="activity_div" [id]="activity.ID">
+  <div class="activity_img">
+    <div class="activity_img__container">
+      <img class="activity_img__content" src="" />
+    </div>
   </div>
 
-  <div class="activity-hours">
-    <h1
-      class="activity-hours__h1"
-      [style]="
-        timeframe !== 'daily'
-          ? 'justify-content: start'
-          : 'justify-content: space-around'
-      "
-    >
-      <span
-        *ngIf="timeframe === 'daily'"
-        id="decrease"
-        (click)="updateTimeAmount($event)"
-        class="activity-hours__btn"
-        >-</span
-      >
-
-      <span>{{ actv?.timeAmount + "hrs" }}</span>
-
-      <span
-        *ngIf="timeframe === 'daily'"
-        id="increase"
-        (click)="updateTimeAmount($event)"
-        class="activity-hours__btn"
-        >+</span
-      >
-    </h1>
-    <p class="activity-hours__p">
-      {{
-        timeframe == "daily"
-          ? "yesterday - "
-          : timeframe == "weekly"
-          ? "last week - "
-          : timeframe == "monthly"
-          ? "last month - "
-          : "yesterday - "
-      }}
-
-      <span>{{ previousActTime + "hrs" }}</span>
-    </p>
+  <div class="activity_info">
+    <p class="activity_info__name">work</p>
+    <span class="activity_info__dots"> &#8226; &#8226; &#8226; </span>
   </div>
+
+  <div class="activity_curr_time">0hrs</div>
+  <div class="activity_prev_time">yesterday - 0hrs</div>
 </div>
-
-<!-- 
-  The non-null assertion operator is an exclamation mark ( ! ), and this is placed after the variable or expression that we want to tell TypeScript isn't null or undefined .
-  It's basically a way to say "ayo ts chill, i know it would be undefined. Fuck it."
--->

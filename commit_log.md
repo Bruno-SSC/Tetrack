@@ -14,3 +14,5 @@ commit 6
     Revisando pra apagar localmente.
 com7
     came back to this project after almost 2 years.
+com8
+    Erased a whole lot of bad code and started refactoring the card-list/card components.
