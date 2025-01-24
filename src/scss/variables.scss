@@ -1,3 +1,5 @@
+$font_family: "Rubik", sans-serif;
+
 $mobile_bp: "480px";
 //smaller phones
 $tablet_bp: "769px";
@@ -8,9 +10,8 @@ $big_monitor_bp: "1440px";
 
 // Primary Colors
 
-// - Blue: hsl(246, 80%, 60%)
-
-// - Light red (work): hsl(15, 100%, 70%)
+$blue: hsl(246, 80%, 60%);
+$light_red: hsl(15, 100%, 70%); // work
 
 // - Soft blue (play): hsl(195, 74%, 62%)
 
@@ -24,7 +25,7 @@ $big_monitor_bp: "1440px";
 
 //  Neutral Colors
 
-// - Very dark blue: hsl(226, 43%, 10%)
-// - Dark blue: hsl(235, 46%, 20%)
-// - Desaturated blue: hsl(235, 45%, 61%)
-// - Pale Blue: hsl(236, 100%, 87%)
+$very_dark_blue: hsl(226, 43%, 10%);
+$dark_blue: hsl(235, 46%, 20%);
+$desatured_blue: hsl(235, 45%, 61%);
+$pale_blue: hsl(236, 100%, 87%);

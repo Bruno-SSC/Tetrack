@@ -1,38 +1,29 @@
-<section class="profile">
-  <div class="card-front">
-    <div class="card-front__img-wrapper">
-      <img src="../../../assets/images/image-jeremy.png" alt="user picture" />
+<section class="parent_div">
+  <div class="profile">
+    <div class="user_img">
+      <div class="user_img__div">
+        <img
+          class="user_img__content"
+          [src]="imgs_path + profile_pic"
+          alt="user picture"
+        />
+      </div>
     </div>
 
-    <div class="text-area">
-      <span class="text-area__span"> Report for </span>
-      <h1 class="text-area__title">Jeremy Robson</h1>
+    <div class="user_info">
+      <span class="user_info__span"> Report for </span>
+      <h1 class="user_info__name">
+        <p>Jeremy</p>
+        <p>Robson</p>
+      </h1>
     </div>
   </div>
 
-  <div class="card-back">
-    <nav class="card-back__nav">
-      <a
-        routerLink="/home/daily"
-        routerLinkActive="card-back__links--active"
-        class="card-back__links"
-      >
-        Daily</a
-      >
-      <a
-        routerLink="/home/weekly"
-        routerLinkActive="card-back__links--active"
-        class="card-back__links"
-      >
-        Weekly</a
-      >
-      <a
-        routerLink="/home/monthly"
-        routerLinkActive="card-back__links--active"
-        class="card-back__links"
-      >
-        Monthly</a
-      >
+  <div class="navigation">
+    <nav class="navigation_menu">
+      <a class="navigation_menu__item"> Daily</a>
+      <a class="navigation_menu__item"> Weekly</a>
+      <a class="navigation_menu__item"> Monthly</a>
     </nav>
   </div>
 </section>

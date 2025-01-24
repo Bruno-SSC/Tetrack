@@ -1,10 +1,13 @@
-.profile {
-  width: 300px;
-  height: 525px;
+@import "variables.scss";
+
+.parent_div {
   position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
 }
 
-.profile .card-front {
+.profile {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,67 +15,160 @@
   height: 70%;
   z-index: 2;
   border-radius: 16px;
+  background-color: $blue;
 
-  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.profile .card-back {
+.user_img__div {
+  width: 4em;
+}
+
+.user_img__content {
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.user_info {
+  font-family: $font_family;
+  color: #fff;
+}
+
+.user_info__span {
+  font-size: 0.8em;
+  opacity: 0.4;
+}
+
+.user_info__name {
+  display: flex;
+  gap: 5px;
+  font-weight: 300;
+  font-size: 1.8em;
+  letter-spacing: 2px;
+}
+
+.navigation {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 32%;
   border-radius: 0 0 16px 16px;
-
   z-index: 1;
-  background-color: hsl(235, 46%, 20%);
+  background-color: $dark_blue;
+  color: #fff;
+  overflow: hidden;
 }
 
-.profile .card-front__img-wrapper {
+.navigation_menu {
+  height: 100%;
   width: 100%;
-
-  img {
-    width: 100px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    margin-left: 30px;
-    margin-top: 30px;
-  }
-}
-
-.profile .card-front .text-area {
-  width: 150px;
-  font-family: "Rubik", sans-serif;
-  margin-top: 30px;
-  margin-left: 30px;
-
-  .text-area__title {
-    font-weight: 300;
-    font-size: 2rem;
-    color: #fff;
-    letter-spacing: 2px;
-  }
-  .text-area__span {
-    font-size: 1.2rem;
-    color: #9c9c9c;
-  }
-}
-
-.profile .card-back__nav {
   display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  margin-top: 30px;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
-.profile .card-back__links {
-  color: #9c9c9c;
-  font-size: 1.2rem;
-  font-family: "Rubik", sans-serif;
+
+.navigation_menu__item {
+  width: fit-content;
+  font-size: 0.9em;
+  font-family: $font_family;
   transition: all ease 1s;
   text-decoration: none;
+  opacity: 0.5;
 }
 
-.profile .card-back__links--active {
-  color: #fff;
+.navigation_menu__item:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media screen and (min-width: $tablet_bp) {
+  .parent_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 2;
+    border-radius: 16px;
+    background-color: $blue;
+    padding-left: 20px;
+  }
+
+  .user_img__div {
+    width: 4em;
+    margin-top: 30px;
+  }
+
+  .user_img__content {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+  .user_info {
+    font-family: $font_family;
+    margin-top: 30px;
+    color: #fff;
+  }
+
+  .user_info__span {
+    font-size: 0.8em;
+    opacity: 0.4;
+  }
+
+  .user_info__name {
+    font-weight: 300;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 32%;
+    border-radius: 0 0 16px 16px;
+    z-index: 1;
+    background-color: $dark_blue;
+    color: #fff;
+    overflow: hidden;
+    padding-left: 20px;
+  }
+
+  .navigation_menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navigation_menu__item {
+    width: fit-content;
+    font-size: 0.9em;
+    font-family: $font_family;
+    transition: all ease 1s;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .navigation_menu__item:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 }

@@ -16,3 +16,6 @@ com7
     came back to this project after almost 2 years.
 com8
     Erased a whole lot of bad code and started refactoring the card-list/card components.
+com9
+    Desktop styling is basically done, started working in the mobile. Changed the list layout and started the card but i'm only starting.
+    I'm worrying about what can I share between them. Now I'm basically moving all the current style for width above $tablet_bp, copy/paste it back and making changes as necessary.

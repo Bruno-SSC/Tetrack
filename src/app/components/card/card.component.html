@@ -1,15 +1,17 @@
-<div class="activity_div" [id]="activity.ID">
+<section class="parent_div">
   <div class="activity_img">
     <div class="activity_img__container">
-      <img class="activity_img__content" src="" />
+      <img class="activity_img__content" src="/assets/images/icon-work.svg" />
     </div>
   </div>
 
-  <div class="activity_info">
-    <p class="activity_info__name">work</p>
-    <span class="activity_info__dots"> &#8226; &#8226; &#8226; </span>
-  </div>
+  <div class="activity_div" [id]="activity.ID">
+    <div class="activity_info">
+      <p class="activity_info__name">work</p>
+      <img class="activity_info__dots_img" src="/assets/images/icon-ellipsis.svg" />
+    </div>
 
-  <div class="activity_curr_time">0hrs</div>
-  <div class="activity_prev_time">yesterday - 0hrs</div>
-</div>
+    <div class="activity_curr_time">32hrs</div>
+    <div class="activity_prev_time">yesterday - 0hrs</div>
+  </div>
+</section>
