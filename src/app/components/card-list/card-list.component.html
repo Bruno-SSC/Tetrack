@@ -1,9 +1,4 @@
 <section class="card_list">
   <app-profile></app-profile>
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
-  <app-card />
+  <app-card *ngFor="let activity of activities" [activity]="activity" />
 </section>

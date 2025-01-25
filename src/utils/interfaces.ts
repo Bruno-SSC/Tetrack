@@ -1,13 +1,19 @@
-export type device_type = 'mobile' | 'tablet' | 'desktop';
+export type allowed_timeframes = 'daily' | 'weekly' | 'monthly';
 
 export interface activity_object {
   ID: string;
-  name: string;
-  accounted_time: number;
-  before_color: string;
-  after_img: string;
+  title: string;
+  timeframes: Record<
+    allowed_timeframes,
+    {
+      current: number;
+      previous: number;
+    }
+  >;
 }
 
-export interface activity_list {
-  [key: string]: activity_object[];
+export interface activity_style {
+  ID: string;
+  icon: string;
+  color: string;
 }

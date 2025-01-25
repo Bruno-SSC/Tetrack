@@ -107,7 +107,6 @@
     left: 0;
     width: 100%;
     z-index: 1;
-    background-color: $light_red;
     border-radius: 16px;
   }
 
@@ -194,7 +193,7 @@
     width: 100%;
     z-index: 1;
     background-color: $light_red;
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
   }
 
   .activity_img__container {

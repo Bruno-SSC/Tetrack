@@ -87,11 +87,11 @@
     transition: all ease 1s;
     text-decoration: none;
     opacity: 0.5;
+    cursor: pointer;
   }
 
-  .navigation_menu__item:hover {
+  .navigation_menu__item--active {
     opacity: 1;
-    cursor: pointer;
   }
 }
 
@@ -184,7 +184,7 @@
     opacity: 0.5;
   }
 
-  .navigation_menu__item:hover {
+  .navigation_menu__item--active {
     opacity: 1;
     cursor: pointer;
   }
@@ -211,7 +211,7 @@
   }
 
   .user_img__div {
-    width: 4em;
+    width: 5em;
     margin-top: 30px;
   }
 
@@ -262,15 +262,15 @@
 
   .navigation_menu__item {
     width: fit-content;
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: $font_family;
     transition: all ease 1s;
     text-decoration: none;
     opacity: 0.5;
+    cursor: pointer;
   }
 
-  .navigation_menu__item:hover {
+  .navigation_menu__item--active {
     opacity: 1;
-    cursor: pointer;
   }
 }

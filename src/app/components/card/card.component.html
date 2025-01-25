@@ -1,20 +1,31 @@
 <section class="parent_div">
-  <div class="activity_img">
+  <div
+    class="activity_img"
+    [ngStyle]="{ 'background-color': get_color(activity.ID) }"
+  >
     <div class="activity_img__container">
-      <img class="activity_img__content" src="/assets/images/icon-work.svg" />
+      <img
+        class="activity_img__content"
+        [src]="this.imgs_path + get_icon(activity.ID)"
+      />
     </div>
   </div>
 
   <div class="activity_div">
     <div class="activity_info">
-      <p class="activity_info__name">work</p>
+      <p class="activity_info__name">{{ activity.title }}</p>
       <img
         class="activity_info__dots_img"
         src="/assets/images/icon-ellipsis.svg"
       />
     </div>
 
-    <div class="activity_curr_time">32hrs</div>
-    <div class="activity_prev_time">yesterday - 0hrs</div>
+    <div class="activity_curr_time">
+      {{ activity.timeframes[timeframe_index].current }}hrs
+    </div>
+    <div class="activity_prev_time">
+      {{ label_previous() }} -
+      {{ activity.timeframes[timeframe_index].previous }}hrs
+    </div>
   </div>
 </section>

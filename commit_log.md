@@ -23,3 +23,5 @@ com10
     The mobile is almost done. 
 com11
     finished the layout/basic styling for phones, ipads and laptops. No animation but overal is responsive.
+com12
+    Added dynamic rendering for the activities and organized all the "data" to be displayed + a bunch of minor adjustments I don't remember. 

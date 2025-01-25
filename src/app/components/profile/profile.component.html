@@ -21,9 +21,16 @@
 
   <div class="navigation">
     <nav class="navigation_menu">
-      <a class="navigation_menu__item"> Daily</a>
-      <a class="navigation_menu__item"> Weekly</a>
-      <a class="navigation_menu__item"> Monthly</a>
+      <a
+        *ngFor="let timeframe of timeframe_options"
+        [ngClass]="{
+          navigation_menu__item: true,
+          'navigation_menu__item--active': is_active(timeframe)
+        }"
+        (click)="change_timeframe(timeframe)"
+      >
+        {{ timeframe | titlecase }}
+      </a>
     </nav>
   </div>
 </section>
