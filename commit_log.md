@@ -19,3 +19,7 @@ com8
 com9
     Desktop styling is basically done, started working in the mobile. Changed the list layout and started the card but i'm only starting.
     I'm worrying about what can I share between them. Now I'm basically moving all the current style for width above $tablet_bp, copy/paste it back and making changes as necessary.
+com10
+    The mobile is almost done. 
+com11
+    finished the layout/basic styling for phones, ipads and laptops. No animation but overal is responsive.

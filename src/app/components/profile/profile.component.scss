@@ -1,91 +1,193 @@
 @import "variables.scss";
 
-.parent_div {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  font-size: 12px;
+@media screen and (max-width: $mobile_bp) {
+  .parent_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+
+    // these 3 props are tricks to make the childs look attached even tho they don't overlap.
+    border-radius: 16px;
+    background-color: $dark_blue;
+    overflow: hidden;
+  }
+
+  .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 2;
+    background-color: $blue;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .user_img__div {
+    width: 4em;
+  }
+
+  .user_img__content {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+  .user_info {
+    font-family: $font_family;
+    color: #fff;
+  }
+
+  .user_info__span {
+    font-size: 0.8em;
+    opacity: 0.4;
+  }
+
+  .user_info__name {
+    display: flex;
+    gap: 5px;
+    font-weight: 300;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    z-index: 1;
+    background-color: $dark_blue;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .navigation_menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .navigation_menu__item {
+    width: fit-content;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-family: $font_family;
+    transition: all ease 1s;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .navigation_menu__item:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
-.profile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  z-index: 2;
-  border-radius: 16px;
-  background-color: $blue;
+@media screen and (min-width: $mobile_bp) and (max-width: $tablet_bp) {
+  .parent_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
+    // these 3 props are tricks to make the childs look attached even tho they don't overlap.
+    border-radius: 16px;
+    background-color: $dark_blue;
+    overflow: hidden;
+  }
 
-.user_img__div {
-  width: 4em;
-}
+  .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 2;
+    background-color: $blue;
+    border-radius: 16px;
 
-.user_img__content {
-  width: 100%;
-  border: 3px solid #fff;
-  border-radius: 50%;
-}
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+  }
 
-.user_info {
-  font-family: $font_family;
-  color: #fff;
-}
+  .user_img__div {
+    width: 4.5em;
+  }
 
-.user_info__span {
-  font-size: 0.8em;
-  opacity: 0.4;
-}
+  .user_img__content {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
 
-.user_info__name {
-  display: flex;
-  gap: 5px;
-  font-weight: 300;
-  font-size: 1.8em;
-  letter-spacing: 2px;
-}
+  .user_info {
+    font-family: $font_family;
+    color: #fff;
+  }
 
-.navigation {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 32%;
-  border-radius: 0 0 16px 16px;
-  z-index: 1;
-  background-color: $dark_blue;
-  color: #fff;
-  overflow: hidden;
-}
+  .user_info__span {
+    font-size: 0.8em;
+    opacity: 0.4;
+  }
 
-.navigation_menu {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-}
+  .user_info__name {
+    display: flex;
+    gap: 5px;
+    font-weight: 300;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+  }
 
-.navigation_menu__item {
-  width: fit-content;
-  font-size: 0.9em;
-  font-family: $font_family;
-  transition: all ease 1s;
-  text-decoration: none;
-  opacity: 0.5;
-}
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    z-index: 1;
+    background-color: $dark_blue;
+    color: #fff;
+    overflow: hidden;
+  }
 
-.navigation_menu__item:hover {
-  opacity: 1;
-  cursor: pointer;
+  .navigation_menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .navigation_menu__item {
+    width: fit-content;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-family: $font_family;
+    transition: all ease 1s;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .navigation_menu__item:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: $tablet_bp) {

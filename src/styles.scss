@@ -17,3 +17,11 @@ body {
   display: grid;
   place-items: center;
 }
+
+@media screen and (max-width: $tablet_bp) {
+  body {
+    height: fit-content;
+    overflow: scroll;
+    padding: 50px 0;
+  }
+}
