@@ -50,7 +50,7 @@ const ladder_effect = [
 // ? Animations
 
 export const main_anim = trigger('main_anim', [
-  transition(':enter', [query('.main > *', ladder_effect)]),
+  transition(':enter', [query('.card_list > *', ladder_effect)]),
 ]);
 
 export const header_anim = trigger('header_anim', [

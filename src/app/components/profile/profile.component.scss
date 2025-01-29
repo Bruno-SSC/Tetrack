@@ -270,6 +270,10 @@
     cursor: pointer;
   }
 
+  .navigation_menu__item:hover{
+    opacity: 1;
+  }
+
   .navigation_menu__item--active {
     opacity: 1;
   }

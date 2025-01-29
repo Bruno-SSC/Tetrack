@@ -50,10 +50,6 @@
     transition: all 1s ease;
   }
 
-  .activity_div:hover {
-    background-color: $desatured_blue;
-  }
-
   .activity_info {
     grid-column: span 2;
     display: flex;
@@ -69,11 +65,6 @@
     object-fit: cover;
     opacity: 0.5;
     transition: all 1s ease;
-  }
-
-  .activity_info__dots_img:hover {
-    cursor: pointer;
-    opacity: 1;
   }
 
   .activity_curr_time {
@@ -138,10 +129,6 @@
     transition: all 1s ease;
   }
 
-  .activity_div:hover {
-    background-color: $desatured_blue;
-  }
-
   .activity_info {
     display: flex;
     justify-content: space-between;
@@ -155,11 +142,6 @@
   .activity_info__dots_img {
     opacity: 0.5;
     transition: all 1s ease;
-  }
-
-  .activity_info__dots_img:hover {
-    cursor: pointer;
-    opacity: 1;
   }
 
   .activity_curr_time {
@@ -224,8 +206,9 @@
     transition: all 1s ease;
   }
 
-  .activity_div:hover {
+  .activity_div:hover:not(:has(.activity_info__dots_img:hover)) {
     background-color: $desatured_blue;
+    cursor: pointer;
   }
 
   .activity_info {
@@ -247,7 +230,6 @@
     cursor: pointer;
     opacity: 1;
   }
-
   .activity_curr_time {
     padding: 0 20px;
     color: #fff;

@@ -1,24 +1,24 @@
-<h1 align="center"> Snap 💻 </h1>
+<h1 align="center"> Tetrack 💻 </h1>
 
 ## Status 🔧
 
-There is always improvements to be made but overal the project is finished. Just for instance, one of the improvements would be acessibility indexes. I might do it in the future.
+It's pratically complete. 
 
 ## Requirements 📄
 
 These are the requirements for this project from frontendMentor challenges:
 
-- View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
-- View the optimal layout for the content depending on their device's screen size
-- See hover states for all interactive elements on the page 
+- Switch between viewing Daily, Weekly, and Monthly stats
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
 ## Alerts ⚡
 
-- > [FrontendMentor Challenge Page](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
+- > [FrontendMentor Challenge Page](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)
 
-- > [Live Project Link](https://snapintro.netlify.app)
+- > [Live Project Link](https://tetrack.netlify.app)
 
-## Goal 📌 
+## Goal 📌
 
 - Build projects for my angular portfolio.
 
@@ -32,7 +32,7 @@ These are the requirements for this project from frontendMentor challenges:
 
 <h3 align="center"> Tecnologias utilizadas 🤖 </h3>
 
- > <div align="center">
- >   <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
- >   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" >
- > </div>
+> <div align="center">
+>   <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
+>   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" >
+> </div>
